@@ -1,0 +1,41 @@
+{
+  "name": "yacht-club",
+  "private": true,
+  "type": "module",
+  "browserslist": [
+    "last 3 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint .",
+    "lint": "npm run editorconfig",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "start": "cross-env NODE_ENV=development gulp start",
+    "html": "gulp html"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/**/*.html",
+    "source/**/*.{pug,twig}",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "browser-sync": "2.27.11",
+    "cross-env": "7.0.3",
+    "del": "7.0.0",
+    "gulp": "4.0.2",
+    "gulp-html-beautify": "1.0.1",
+    "gulp-pug": "5.0.0",
+    "stylelint": "14.16.1",
+    "stylelint-config-htmlacademy": "1.1.4"
+  },
+  "engines": {
+    "node": "^16"
+  }
+}
